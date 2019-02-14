@@ -1,16 +1,23 @@
 [color]
 	ui = auto
 [alias]
-lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
-lg = !"git lg1"
+	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	lgh = log --branches --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' HEAD
 
-fza = "!git ls-files -m | fzf --print0 -m | xargs -r -0 -t -o git add"
-fzs = "!git -c color.ui=always show | fzf --ansi --reverse"
-fzau = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -r -0 -t -o git add"
-fzc = "!git ls-files -m | fzf --print0 -m | xargs -r -0 -t -o git checkout -- "
-fzg = "!git -c color.ui=always lg1 | fzf -m --ansi --reverse"
+	fza = "!git ls-files -m | fzf --print0 -m | xargs -r -0 -t -o git add"
+	fzs = "!git -c color.ui=always show | fzf --ansi --reverse"
+	fzau = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -r -0 -t -o git add"
+	fzc = "!git ls-files -m | fzf --print0 -m | xargs -r -0 -t -o git checkout -- "
+	fzg = "!git -c color.ui=always lg1 | fzf -m --ansi --reverse"
 
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [user]
 	name = Francois Gervais
 	email = francoisgervais@gmail.com
+[merge]
+	tool = bc3
+[mergetool]
+	bc3 = trustExitCode
+[mergetool "bc3"]
+	trustExitCode = true
