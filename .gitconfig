@@ -6,9 +6,10 @@ lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(
 lg = !"git lg1"
 
 fza = "!git ls-files -m | fzf --print0 -m | xargs -r -0 -t -o git add"
+fzs = "!git -c color.ui=always show | fzf --ansi --reverse"
 fzau = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -r -0 -t -o git add"
 fzc = "!git ls-files -m | fzf --print0 -m | xargs -r -0 -t -o git checkout -- "
-fzs = "!git -c color.ui=always lg1 | fzf -m --ansi --reverse"
+fzg = "!git -c color.ui=always lg1 | fzf -m --ansi --reverse"
 
 [user]
 	name = Francois Gervais
