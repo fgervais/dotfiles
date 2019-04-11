@@ -23,3 +23,5 @@
 	bc3 = trustExitCode
 [mergetool "bc3"]
 	trustExitCode = true
+[includeIf "gitdir:~/work/"]
+	path = ~/.gitconfig.work
