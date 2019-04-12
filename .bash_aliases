@@ -22,6 +22,7 @@ __fzf_history__() (
 ################################################################################
 export PIPENV_VENV_IN_PROJECT=1
 export PATH="$HOME/.local/bin:$PATH"
+export EDITOR=vim
 
 ################################################################################
 # alias section
