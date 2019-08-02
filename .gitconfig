@@ -13,7 +13,8 @@
 	fzc = "!git ls-files -m | fzf --print0 -m | xargs -r -0 -t -o git checkout -- "
 	fzg = "!git -c color.ui=always lg1 | fzf -m --ansi --reverse"
 
-	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+	serv = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+	serv-push = -c daemon.receivepack=true daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 [user]
 	name = Francois Gervais
 	email = francoisgervais@gmail.com
