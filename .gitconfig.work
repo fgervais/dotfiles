@@ -1,3 +1,9 @@
 [user]
 	email = fgervais@distech-controls.com
 	signingkey = D6CDC52B49C3229912E5D4CBD19B1A94E9C7FCEC
+[sendemail]
+	smtpserver = smtp.office365.com
+	smtpServerPort = 587
+	smtpEncryption = tls
+	smtpUser = fxg30@acuitysso.com
+	from = Francois Gervais <fgervais@distech-controls.com>
