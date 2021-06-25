@@ -18,14 +18,14 @@
 [user]
 	name = Francois Gervais
 	email = francoisgervais@gmail.com
-	signingkey = F1CECC69AD0CE297E71217209E551DA1A4C8B21D
+	signingkey = F121E404CF5235D6415A5098AC9BB2E3257860A2
 [merge]
 	tool = bc3
 [mergetool]
 	bc3 = trustExitCode
 [mergetool "bc3"]
 	trustExitCode = true
-#[commit]
-	#gpgsign = true
+[commit]
+	gpgsign = true
 [includeIf "gitdir:~/work/"]
 	path = ~/.gitconfig.work
