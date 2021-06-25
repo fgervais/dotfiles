@@ -29,3 +29,5 @@
 	gpgsign = true
 [includeIf "gitdir:~/work/"]
 	path = ~/.gitconfig.work
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
